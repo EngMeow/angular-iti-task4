@@ -1,0 +1,36 @@
+<main class="page product-page">
+    <section class="clean-block clean-product dark">
+        <div class="container p-3">
+            <div class="block-heading m-5">
+                <h2 class=" text-center fw-bold fs-3 text-light">Product ID : {{ this.productId }}</h2>
+            </div>
+            <div class="block-content">
+                <div class="product-info">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="gallery">
+                                <div id="product-preview" class="vanilla-zoom">
+                                    <div class="zoomed-image"></div>
+                                    <div class="sidebar m-5"><img class="img-fluid d-block small-preview rounded" src='assets/img/tech/{{product.id}}.jpg'></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-light">
+                            <div class="info">
+                                <h1>{{product.name}}</h1>
+                                <div class="rating"><img src="assets/img/star.svg"><img src="assets/img/star.svg"><img src="assets/img/star.svg"><img src="assets/img/star-half-empty.svg"><img src="assets/img/star-empty.svg"></div>
+                                <div class="price m-3">
+                                    Product price : <h3>{{product.price | currency}}</h3>
+                                </div>
+                                <div class="quantity m-3">
+                                    Product quantity<h3>{{product.quantity}}</h3>
+                                </div>
+                                <button class="btn btn-outline-primary mt-3" [routerLink]="['/products']" type="button"><i class="icon-basket"></i>Back to products</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </section>
+</main>
